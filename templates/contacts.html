@@ -1,0 +1,14 @@
+{% extends 'layout.html'%}
+
+{% block body%}
+<h1>Contacts</h1>
+<ul class = "list-group">
+{% for contact in contacts%}
+	<ul>
+	<li class = "list-group-item"><a href ="contacts/{{contact.Employee_code}}">{{contact.Employee_code}} click for details</a></li>
+	<li class = "list-group-item">{{contact.Full_Name}}</li>
+	<li class = "list-group-item">{{contact.The_Occupation}}</li>
+	</ul>
+{%endfor%}
+</ul>
+{% endblock %}
